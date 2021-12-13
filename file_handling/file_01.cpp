@@ -5,41 +5,32 @@ using namespace std;
 
 int main()
 {
-    ofstream f;
-    string name;
+    string s = "hii kaise ho main \n to ekdam mast hoon";
+    string s1;
 
-    f.open("file.txt");
+    // for writing in files
+    ofstream out;
+    out.open("hello.txt");
+    out<<s;
 
-    while(f)
-    {
-        getline(cin,name);
+    out.close();
 
-        if(name=="-1")
-        {
-            break;
-        }
 
-        f<<name<<endl;
-
-    }
-
-    f.close();
-
-    cout<<"hello "<<name<<endl;
-
-    ifstream f1;
-
-    f1.open("file.txt",ios::in);
+    // for reading in files
+    ifstream in1;
+    in1.open("hello.txt");
     
-    while(f1)
-    {
-        getline(f1,name);
+    // one word reading
+    // in1>>s1;
 
-        cout<<name<<endl;
+    // one line reading
+    getline(in1,s1);
 
-    }
 
-    f1.close();
+    // printing readed words
+    cout<<s1<<endl;
+
+    in1.close();
     
      
      return 0;
