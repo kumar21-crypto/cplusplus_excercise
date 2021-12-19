@@ -1,10 +1,11 @@
 // pattern type
 
-//           *
-//          * *
-//        *  *  *
-//       *  * *  *
-//     *  *  *  *  *
+//      *     
+//     * *    
+//    *   *   
+//   *     *  
+//  *       * 
+// * * * * * *
 
 #include <iostream>
 
@@ -12,19 +13,18 @@ using namespace std;
 
 int main()
 {
+
     int k;
 
-    for (int i = 1; i <= 5; i++)
+    for (int i = 1; i <= 6; i++)
     {
         k = 1;
 
-        for (int j = 1; j <= 9; j++)
+        for (int j = 1; j <= 11; j++)
         {
-            if (j >= 6 - i && j <= 4 + i && k)
+            if (j == 7 - i || j == (5 + i) || (i == 6 && j >= 1 && k))
             {
-
                 cout << "*";
-
                 k = 0;
             }
             else
